@@ -24,14 +24,14 @@ int printCat(int index){
     }
     else{
         std::cout << "cat index = [" << index << "] ";
-        printf("name =[%s] ", cats[index].name);
-        printf("gender= [%s] ", genderName(cats[index].gender));
-        printf("breed =[%s] ", breedName(cats[index].breed));
-        printf("isFixed = [%d] ",cats[index].is_fixed);
-        printf("weight = [%f] ", cats[index].weight);
-        printf("color1 = [%s] ", collarColorName(cats[index].collarColor1));
-        printf("color2 = [%s] ", collarColorName(cats[index].collarColor2));
-        printf("License Number = [%llu]\n", cats[index].license);
+        std::cout <<"name =[" << cats[index].name << "] ";
+        std::cout << "gender = [" << genderName(cats[index].gender) << "] ";
+        std::cout << "breed =[" << breedName(cats[index].breed) << "] ";
+        std::cout << "isFixed = [" << cats[index].is_fixed << "] ";
+        std::cout << "weight = [" << cats[index].weight << "] ";
+        std::cout <<"color1 = [" << collarColorName(cats[index].collarColor1) << "] ";
+        std::cout <<"color2 = [" << collarColorName(cats[index].collarColor2) << "] ";
+        std::cout << "License Number = [" << cats[index].license << "] " << std::endl;
 
 
     }
