@@ -23,7 +23,7 @@ int printCat(int index){
         fprintf(stderr, "reportCats.c: animalFarm0: Bad cat [%d]" ,index);
     }
     else{
-        std::cout<<("cat index = [%d] ", index);
+        std::cout << "cat index = [" << index << "] ";
         printf("name =[%s] ", cats[index].name);
         printf("gender= [%s] ", genderName(cats[index].gender));
         printf("breed =[%s] ", breedName(cats[index].breed));
@@ -42,13 +42,13 @@ void printAllCats(){
     for (int i=0; i < numCats; i++){
         std::cout << "cat index = [" << i << "] ";
         std::cout <<"name =[" << cats[i].name << "] ";
-        printf("gender= [%s] ", genderName(cats[i].gender));
-        printf("breed =[%s] ", breedName(cats[i].breed));
-        printf("isFixed = [%d] ",cats[i].is_fixed);
-        printf("weight = [%f] ", cats[i].weight);
-        printf("color1 = [%s] ", collarColorName(cats[i].collarColor1));
-        printf("color2 = [%s] ", collarColorName(cats[i].collarColor2));
-        printf("License Number = [%llu]\n", cats[i].license);
+        std::cout << "gender = [" << genderName(cats[i].gender) << "] ";
+        std::cout << "breed =[" << breedName(cats[i].breed) << "] ";
+        std::cout << "isFixed = [" << cats[i].is_fixed << "] ";
+        std::cout << "weight = [" << cats[i].weight << "] ";
+        std::cout <<"color1 = [" << collarColorName(cats[i].collarColor1) << "] ";
+        std::cout <<"color2 = [" << collarColorName(cats[i].collarColor2) << "] ";
+        std::cout << "License Number = [" << cats[i].license << "] " << std::endl;
 
     }
 }
