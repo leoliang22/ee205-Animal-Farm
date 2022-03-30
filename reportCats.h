@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include "catDatabase.h"
 
-extern size_t numCats;
+extern NumCats numCats;
 extern float catWeight[];
 extern bool is_fixed[];
 

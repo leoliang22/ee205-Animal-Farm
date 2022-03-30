@@ -15,7 +15,7 @@
 #include "catDatabase.h"
 #include "config.h"
 
-extern size_t numCats;
+extern NumCats numCats;
 
 
 

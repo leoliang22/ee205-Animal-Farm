@@ -11,5 +11,5 @@
 #pragma once
 #include <stdio.h>
 
-extern size_t numCats;
+extern NumCats numCats;
 extern void deleteAllCats();

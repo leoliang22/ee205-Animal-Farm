@@ -20,7 +20,7 @@
 //bool is_fixed[max_cats];
 //float catWeight[max_cats];
 
-size_t numCats  = 0;
+NumCats numCats  = 0;
 
 
 void initializeDatabase(){
