@@ -22,7 +22,7 @@
 struct Cat cats[max_length];
 
 
-int addCat(const char* name, const enum Genders gender, const enum Breeds breed, const bool isFixed , const float weight, const enum Color color1, const enum Color color2, const unsigned long long licen_num){
+int addCat(const char* name, const enum Genders gender, const enum Breeds breed, const bool isFixed , const Weight weight, const enum Color color1, const enum Color color2, const unsigned long long licen_num){
 
     if (numCats >= max_cats){
         fprintf(stderr, "[%s]: Cat Database is full\n", PROGRAM_NAME);

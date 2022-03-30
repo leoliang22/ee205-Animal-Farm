@@ -18,7 +18,7 @@ extern bool is_fixed[];
 
 extern int updateCatName(int index, const char* newName);
 extern int fixCat(int index);
-extern int updateCatWeight(int index, const float newWeight);
+extern int updateCatWeight(int index, const Weight newWeight);
 extern int updateCatCollar1(int index, const enum Color collar1);
 extern int updateCatCollar2(int index, const enum Color collar2);
 extern int updateLicense(int index, int licen_num);

@@ -14,6 +14,9 @@
 #include "config.h"
 #define max_length 50
 
+
+typedef float Weight;
+
 enum Genders {UNKNOWN_GENDER, MALE, FEMALE, OTHER};
 enum Breeds {UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 enum Color {BLACK, WHITE, RED, BLUE, GREEN, PINK};
@@ -31,7 +34,7 @@ struct Cat{
     enum Genders gender;
     enum Breeds breed;
     bool is_fixed;
-    float weight;
+    Weight weight;
     enum Color collarColor1;
     enum Color collarColor2;
     unsigned long long license;
