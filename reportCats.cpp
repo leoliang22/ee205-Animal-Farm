@@ -13,7 +13,7 @@
 #include "catDatabase.h"
 #include "reportCats.h"
 #include<stdbool.h>
-
+#include <iostream>
 
 int printCat(int index){
     if(index<0){
@@ -23,7 +23,7 @@ int printCat(int index){
         fprintf(stderr, "reportCats.c: animalFarm0: Bad cat [%d]" ,index);
     }
     else{
-        printf("cat index = [%d] ", index);
+        std::cout<<("cat index = [%d] ", index);
         printf("name =[%s] ", cats[index].name);
         printf("gender= [%s] ", genderName(cats[index].gender));
         printf("breed =[%s] ", breedName(cats[index].breed));
@@ -40,8 +40,8 @@ int printCat(int index){
 
 void printAllCats(){
     for (int i=0; i < numCats; i++){
-        printf("cat index = [%d] ", i);
-        printf("name =[%s] ", cats[i].name);
+        std::cout << "cat index = [" << i << "] ";
+        std::cout <<"name =[" << cats[i].name << "] ";
         printf("gender= [%s] ", genderName(cats[i].gender));
         printf("breed =[%s] ", breedName(cats[i].breed));
         printf("isFixed = [%d] ",cats[i].is_fixed);
