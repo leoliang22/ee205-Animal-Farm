@@ -19,7 +19,7 @@
 
 
 int main(void){
-    printf("Starting Animal Farm 0 \n");
+    printf("Starting Animal Farm 1 \n");
     addCat( "Loki", MALE, PERSIAN, true, 8.5, BLACK, WHITE, 101 ) ;
     addCat( "Milo", MALE, MANX, true, 7.0, BLACK, RED, 102 ) ;
     addCat( "Bella", FEMALE, MAINE_COON, true, 18.2, BLACK, BLUE, 103 ) ;
@@ -42,5 +42,5 @@ int main(void){
     deleteAllCats();
     printAllCats();
 
-    printf("Done with Animal Farm 0 \n");
+    printf("Done with Animal Farm 1 \n");
 }
