@@ -16,6 +16,7 @@
 #include <iostream>
 
 /*
+
 int printCat(int index){
     if(index<0){
         fprintf(stderr, "reportCats.c: animalFarm0: Bad cat [%d]" ,index);
@@ -61,6 +62,7 @@ int findCat(const char* name){
     }
     return 0;
 }
+*/
 
 const char* genderName(const enum Genders gender){
     switch( gender ) {
@@ -93,4 +95,4 @@ const char *collarColorName(const enum Color color){
     }
     return 0;
 }
-*/
+
