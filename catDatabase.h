@@ -30,7 +30,7 @@ extern bool isCatInDatabase(const char* name);
 
 
 
-struct Cat{
+/*struct Cat{
     char name[max_length];
     enum Genders gender;
     enum Breeds breed;
@@ -39,6 +39,19 @@ struct Cat{
     enum Color collarColor1;
     enum Color collarColor2;
     unsigned long long license;
+};*/
+
+class Cat{
+        protected:
+        char name[max_length];
+        enum Genders gender;
+        enum Breeds breed;
+        bool is_fixed;
+        Weight weight;
+
+        public:
+        Cat* next;
 };
+
 
 extern struct Cat cats[max_length];
