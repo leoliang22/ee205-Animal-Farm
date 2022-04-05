@@ -15,6 +15,7 @@
 #include<stdbool.h>
 #include <iostream>
 
+/*
 int printCat(int index){
     if(index<0){
         fprintf(stderr, "reportCats.c: animalFarm0: Bad cat [%d]" ,index);
@@ -92,3 +93,4 @@ const char *collarColorName(const enum Color color){
     }
     return 0;
 }
+*/

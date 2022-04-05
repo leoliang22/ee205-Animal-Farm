@@ -13,7 +13,9 @@
 #include "deleteCats.h"
 #include <string.h>
 
+/*
 void deleteAllCats(void){
     numCats=0;
     memset(&cats, 0, sizeof(cats));
 }
+*/

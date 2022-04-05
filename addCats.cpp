@@ -19,6 +19,7 @@
 
 //#define DEBUG
 
+/*
 struct Cat cats[max_length];
 
 
@@ -81,3 +82,4 @@ int addCat(const char* name, const enum Genders gender, const enum Breeds breed,
 
     return numCats++;
 }
+*/

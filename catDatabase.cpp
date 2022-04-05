@@ -20,6 +20,7 @@
 //bool is_fixed[max_cats];
 //float catWeight[max_cats];
 
+/*
 NumCats numCats  = 0;
 
 
@@ -36,3 +37,4 @@ bool isCatInDatabase( const char* name){
     }
     return false;
 }
+*/

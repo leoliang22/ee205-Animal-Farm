@@ -15,6 +15,7 @@
 #include "updateCats.h"
 #include "config.h"
 
+/*
 int updateCatName(int index, const char* newName){
     if(strlen(newName) == 0){
         fprintf(stderr, "Cat name cannot be empty. \n");
@@ -60,3 +61,4 @@ int updateLicense(int index, int licen_num){
     cats[index].license = licen_num;
     return 1;
 }
+*/
