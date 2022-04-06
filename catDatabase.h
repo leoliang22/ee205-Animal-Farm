@@ -42,6 +42,7 @@ extern bool isCatInDatabase(const char* name);
 };*/
 
 class Cat{
+        //the traits of the cat we are recording
         protected:
         char name[max_length];
         enum Genders gender;
@@ -49,6 +50,7 @@ class Cat{
         bool is_fixed;
         Weight weight;
 
+        //the pointer of the next cat
         public:
         Cat* next;
 
@@ -75,6 +77,12 @@ class Cat{
         bool validateGender(const Genders newGender);
         bool validateBreed(const Breeds newBreed);
         bool validateWeight(const Weight newWeight);
+
+        //constructors and destructors
+        public:
+        Cat();
+        Cat(const char* newName ,const Genders newGender ,const Breeds newBreed ,const Weight newWeight);
+        virtual ~Cat();
 
 };
 

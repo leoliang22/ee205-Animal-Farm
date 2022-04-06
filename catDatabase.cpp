@@ -119,3 +119,28 @@ bool Cat::validateWeight(const Weight newWeight) {
     }
     return true;
 }
+
+Cat::Cat() {
+    memset( name, 0, max_length );
+    gender = UNKNOWN_GENDER ;
+    breed = UNKNOWN_BREED ;
+    is_fixed = false ;
+    weight = -1 ;
+    next = nullptr ;
+}
+
+Cat::Cat(const char* newName, const Genders newGender ,const Breeds newBreed ,const Weight newWeight){
+    setName(newName);
+    setGender(newGender);
+    setBreed(newBreed);
+    setWeight(newWeight);
+}
+
+Cat::~Cat() {
+    memset( name, 0, max_length );
+    gender = UNKNOWN_GENDER ;
+    breed = UNKNOWN_BREED ;
+    is_fixed = false ;
+    weight = -1 ;
+    next = nullptr ;
+}
