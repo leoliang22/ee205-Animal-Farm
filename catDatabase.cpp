@@ -42,6 +42,12 @@ const char *Cat::getName() const {
     return name;
 }
 
+void Cat::setName(const char *newName) {
+    validateName( newName );
+    memset(name, 0 , max_length);
+    strcpy( name, newName);
+}
+
 Genders Cat::getGender() const {
     return gender;
 }
@@ -72,4 +78,19 @@ Weight Cat::getWeight() const {
 
 void Cat::setWeight(Weight weight) {
     Cat::weight = weight;
+}
+
+bool Cat::validateName(const char* newName) {
+    if( newName == nullptr ){
+        fprintf(stderr, "Cat Name cannot be empty");
+        return false;
+    }
+    if( strlen(newName) > max_length){
+        fprintf(stderr, "Cat name cannot be greater than [%d]", max_length);
+        return false;
+    }
+    if( strlen(newName) < 0){
+        fprintf(stderr, "Cat name length cannot be <0");
+        return false;
+    }
 }

@@ -68,6 +68,11 @@ class Cat{
         //Weight
         Weight getWeight() const;
         void setWeight(Weight weight);
+
+        public:
+        //validate functions
+        bool validateName(const char* newName);
+
 };
 
 
