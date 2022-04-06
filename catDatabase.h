@@ -66,7 +66,7 @@ class Cat{
         void setBreed(Breeds breed);
         //isCatFixed
         bool isFixed() const;
-        void setIsFixed(bool isFixed);
+        void setIsFixed();
         //Weight
         Weight getWeight() const;
         void setWeight(Weight weight);
