@@ -86,6 +86,8 @@ class Cat{
 
         //print and validate
         bool print();
+
+        bool validate();
 };
 
 

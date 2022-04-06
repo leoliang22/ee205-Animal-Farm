@@ -160,3 +160,13 @@ bool Cat::print(){
     FORMAT_LINE( "Cat", "weight" ) << getWeight() << endl ;
     return true ;
 }
+
+bool Cat::validate() {
+    {
+        validateName(name);
+        validateWeight(weight);
+        validateBreed(breed);
+        validateGender(gender);
+    }
+    return true;
+}
