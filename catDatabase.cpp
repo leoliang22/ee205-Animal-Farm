@@ -102,3 +102,12 @@ bool Cat::validateGender(const Genders newGender) {
     }
     return true;
 }
+
+bool Cat::validateBreed(const Breeds newBreed) {
+    if (newBreed == UNKNOWN_BREED)
+    {
+        fprintf(stderr, "Breed of cat must be known");
+        return false;
+    }
+    return true;
+}
