@@ -52,8 +52,22 @@ class Cat{
         public:
         Cat* next;
 
+        public:
+        //name
         const char *getName() const;
         void setName(const char* newName);
+        //gender
+        Genders getGender() const;
+        void setGender(Genders gender);
+        //breed
+        Breeds getBreed() const;
+        void setBreed(Breeds breed);
+        //isCatFixed
+        bool isFixed() const;
+        void setIsFixed(bool isFixed);
+        //Weight
+        Weight getWeight() const;
+        void setWeight(Weight weight);
 };
 
 

@@ -41,3 +41,35 @@ bool isCatInDatabase( const char* name){
 const char *Cat::getName() const {
     return name;
 }
+
+Genders Cat::getGender() const {
+    return gender;
+}
+
+void Cat::setGender(Genders gender) {
+    Cat::gender = gender;
+}
+
+Breeds Cat::getBreed() const {
+    return breed;
+}
+
+void Cat::setBreed(Breeds breed) {
+    Cat::breed = breed;
+}
+
+bool Cat::isFixed() const {
+    return is_fixed;
+}
+
+void Cat::setIsFixed(bool isFixed) {
+    is_fixed = isFixed;
+}
+
+Weight Cat::getWeight() const {
+    return weight;
+}
+
+void Cat::setWeight(Weight weight) {
+    Cat::weight = weight;
+}
