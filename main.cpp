@@ -20,11 +20,21 @@
 
 
 int main(void){
-    std::cout <<"Starting Animal Farm 1" << std::endl;
+    std::cout <<"Starting Animal Farm 2" << std::endl;
     Cat Chili = Cat("Chili", MALE, SHORTHAIR, 1.5);
     Chili.print();
-    Chili.setIsFixed();
-    Chili.print();
+    //Chili.setIsFixed();
+    //Chili.print();
+    Cat Trin = Cat("Trin", FEMALE, MANX, 1.4);
+    Trin.print();
+    Cat Kali = Cat("Kali", FEMALE, SHORTHAIR, 1.3);
+    Kali.print();
+    Cat Bella = Cat("Bella", FEMALE, MAINE_COON, 1.2);
+    Bella.print();
+    Cat Milo = Cat("Milo", MALE, MANX, 1.1);
+    Milo.print();
+    Cat Loki = Cat("Loki", MALE, PERSIAN, 1);
+    Loki.print();
 
   /*  addCat( "Loki", MALE, PERSIAN, true, 8.5, BLACK, WHITE, 101 ) ;
     addCat( "Milo", MALE, MANX, true, 7.0, BLACK, RED, 102 ) ;
@@ -48,6 +58,6 @@ int main(void){
     deleteAllCats();
     printAllCats();
 */
-    std::cout <<"Done with Animal Farm 1" << std::endl;
+    std::cout <<"Done with Animal Farm 2" << std::endl;
 }
 
