@@ -12,14 +12,16 @@
 #include "catDatabase.h"
 #include <stdbool.h>
 #include "config.h"
+#include "reportCats.h"
 #include <string.h>
-
-//char catNames[max_cats][max_length];
+#include <iostream>
+#include <iomanip>
+//char catNames[max_cats][MAX_LENGTH];
 //enum Genders catGender[max_cats];
 //enum Breeds catBreed[max_cats];
 //bool is_fixed[max_cats];
 //float catWeight[max_cats];
-
+using namespace std;
 /*
 NumCats numCats  = 0;
 
@@ -31,7 +33,7 @@ void initializeDatabase(){
 
 bool isCatInDatabase( const char* name){
     for (size_t i =0; i < numCats ; i++) {
-        if (strncmp(cats[i].name, name, max_length) == 0) {
+        if (strncmp(cats[i].name, name, MAX_LENGTH) == 0) {
             return true;
         }
     }
@@ -44,7 +46,7 @@ const char *Cat::getName() const {
 
 void Cat::setName(const char *newName) {
     validateName( newName );
-    memset(name, 0 , max_length);
+    memset(name, 0 , MAX_LENGTH);
     strcpy( name, newName);
 }
 
@@ -85,8 +87,8 @@ bool Cat::validateName(const char* newName) {
         fprintf(stderr, "Cat Name cannot be empty");
         return false;
     }
-    if( strlen(newName) > max_length){
-        fprintf(stderr, "Cat name cannot be greater than [%d]", max_length);
+    if(strlen(newName) > MAX_LENGTH){
+        fprintf(stderr, "Cat name cannot be greater than [%d]", MAX_LENGTH);
         return false;
     }
     if( strlen(newName) < 0){
@@ -121,7 +123,7 @@ bool Cat::validateWeight(const Weight newWeight) {
 }
 
 Cat::Cat() {
-    memset( name, 0, max_length );
+    memset(name, 0, MAX_LENGTH );
     gender = UNKNOWN_GENDER ;
     breed = UNKNOWN_BREED ;
     is_fixed = false ;
@@ -137,10 +139,24 @@ Cat::Cat(const char* newName, const Genders newGender ,const Breeds newBreed ,co
 }
 
 Cat::~Cat() {
-    memset( name, 0, max_length );
+    memset(name, 0, MAX_LENGTH );
     gender = UNKNOWN_GENDER ;
     breed = UNKNOWN_BREED ;
     is_fixed = false ;
     weight = -1 ;
     next = nullptr ;
+}
+
+#define FORMAT_LINE( className, member ) cout << setw(8) << (className) << setw(20) << (member) << setw(52)
+bool Cat::print(){
+    cout << setw(80) << setfill( '=' ) << "" << endl ;
+    cout << setfill( ' ' ) ;
+    cout << left ;
+    cout << boolalpha ;
+    FORMAT_LINE( "Cat", "name" ) << getName() << endl ;
+    FORMAT_LINE( "Cat", "gender" ) << genderName( getGender() ) << endl ;
+    FORMAT_LINE( "Cat", "breed" ) << breedName( getBreed() ) << endl ;
+    FORMAT_LINE( "Cat", "isFixed" ) << isFixed() << endl ;
+    FORMAT_LINE( "Cat", "weight" ) << getWeight() << endl ;
+    return true ;
 }

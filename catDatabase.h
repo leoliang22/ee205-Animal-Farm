@@ -12,7 +12,7 @@
 
 #include <stdbool.h>
 #include "config.h"
-#define max_length 50
+#define MAX_LENGTH 50
 
 
 typedef float Weight;
@@ -31,7 +31,7 @@ extern bool isCatInDatabase(const char* name);
 
 
 /*struct Cat{
-    char name[max_length];
+    char name[MAX_LENGTH];
     enum Genders gender;
     enum Breeds breed;
     bool is_fixed;
@@ -44,7 +44,7 @@ extern bool isCatInDatabase(const char* name);
 class Cat{
         //the traits of the cat we are recording
         protected:
-        char name[max_length];
+        char name[MAX_LENGTH];
         enum Genders gender;
         enum Breeds breed;
         bool is_fixed;
@@ -84,7 +84,9 @@ class Cat{
         Cat(const char* newName ,const Genders newGender ,const Breeds newBreed ,const Weight newWeight);
         virtual ~Cat();
 
+        //print and validate
+        bool print();
 };
 
 
-extern struct Cat cats[max_length];
+extern struct Cat cats[MAX_LENGTH];
