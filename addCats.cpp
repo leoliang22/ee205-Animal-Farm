@@ -19,6 +19,14 @@
 
 //#define DEBUG
 
+Cat* catDatabaseHeadPointer = nullptr;
+
+bool addCat(Cat* newCat){
+    newCat-> next = catDatabaseHeadPointer;
+    catDatabaseHeadPointer= newCat;
+    numCats++;
+}
+
 /*
 struct Cat cats[MAX_LENGTH];
 
