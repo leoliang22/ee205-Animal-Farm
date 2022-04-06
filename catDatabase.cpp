@@ -94,3 +94,11 @@ bool Cat::validateName(const char* newName) {
         return false;
     }
 }
+
+bool Cat::validateGender(const Genders newGender) {
+    if (newGender == UNKNOWN_GENDER){
+        fprintf(stderr,"Gender of cat must be known");
+        return false;
+    }
+    return true;
+}

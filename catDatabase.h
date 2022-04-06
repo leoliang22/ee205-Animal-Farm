@@ -72,6 +72,7 @@ class Cat{
         public:
         //validate functions
         bool validateName(const char* newName);
+        bool validateGender(const Genders newGender);
 
 };
 
