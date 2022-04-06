@@ -51,6 +51,9 @@ class Cat{
 
         public:
         Cat* next;
+
+        const char *getName() const;
+        void setName(const char* newName);
 };
 
 

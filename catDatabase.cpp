@@ -38,3 +38,6 @@ bool isCatInDatabase( const char* name){
     return false;
 }
 */
+const char *Cat::getName() const {
+    return name;
+}
