@@ -26,7 +26,7 @@ int updateCatName(int index, const char* newName){
         return 0;
     }
     else{
-        memset(cats[index].name, 0, max_length);
+        memset(cats[index].name, 0, MAX_LENGTH);
         strcpy(cats[index].name, newName);
         return 0;
     }

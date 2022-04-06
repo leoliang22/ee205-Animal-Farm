@@ -56,7 +56,7 @@ void printAllCats(){
 }
 int findCat(const char* name){
     for( size_t i = 0; i < numCats; i++) {
-        if(strncmp(name, cats[i].name, max_length) == 0){
+        if(strncmp(name, cats[i].name, MAX_LENGTH) == 0){
             return i;
         }
     }

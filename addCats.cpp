@@ -20,7 +20,7 @@
 //#define DEBUG
 
 /*
-struct Cat cats[max_length];
+struct Cat cats[MAX_LENGTH];
 
 
 int addCat(const char* name, const enum Genders gender, const enum Breeds breed, const bool isFixed , const Weight weight, const enum Color color1, const enum Color color2, const unsigned long long licen_num){
@@ -34,14 +34,14 @@ int addCat(const char* name, const enum Genders gender, const enum Breeds breed,
         fprintf(stderr, "[%s]: Cat Name cannot be empty\n", PROGRAM_NAME);
         return 0;
     }
-    if (strlen(name) > max_length){
-        fprintf(stderr, "[%s]: Cat Name cannot be longer than [%d]\n", PROGRAM_NAME, max_length);
+    if (strlen(name) > MAX_LENGTH){
+        fprintf(stderr, "[%s]: Cat Name cannot be longer than [%d]\n", PROGRAM_NAME, MAX_LENGTH);
         return 0;
     }
     if(isCatInDatabase(name) == false){
         //fprintf(stdr, "[%s]: Cat name [%s] is already in the database.\n", PROGRAM_NAME, name);
         //return 0;
-        strncpy(cats[numCats].name, name, max_length);
+        strncpy(cats[numCats].name, name, MAX_LENGTH);
 #ifdef DEBUG
         printf("added name \n");
 #endif
