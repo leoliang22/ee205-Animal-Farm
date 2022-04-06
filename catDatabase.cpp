@@ -111,3 +111,11 @@ bool Cat::validateBreed(const Breeds newBreed) {
     }
     return true;
 }
+
+bool Cat::validateWeight(const Weight newWeight) {
+    if ( newWeight < 0){
+        fprintf(stderr, "Weight of cat must be >0");
+        return false;
+    }
+    return true;
+}
