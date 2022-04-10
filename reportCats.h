@@ -20,7 +20,7 @@ extern bool is_fixed[];
 
 
 extern int printCat(int index);
-extern void printAllCats();
+extern bool printAllCats();
 extern int findCat(const char* name);
 extern const char* genderName(const enum Genders gender);
 extern const char* breedName(const enum Breeds breed);

@@ -12,6 +12,7 @@
 #include<string.h>
 #include "catDatabase.h"
 #include "reportCats.h"
+#include "addCats.h"
 #include<stdbool.h>
 #include <iostream>
 
@@ -40,7 +41,7 @@ int printCat(int index){
     return 0;
 }
 
-void printAllCats(){
+void printAllCats_old(){
     for (int i=0; i < numCats; i++){
         std::cout << "cat index = [" << i << "] ";
         std::cout <<"name =[" << cats[i].name << "] ";
@@ -96,3 +97,11 @@ const char *collarColorName(const enum Color color){
     return 0;
 }
 
+bool printAllCats(){
+    for(Cat* cats_printed= catDatabaseHeadPointer; cats_printed != nullptr; cats_printed = cats_printed->next)
+    {
+        catDatabaseHeadPointer->print();
+        numCats++;
+    }
+    return true;
+}
