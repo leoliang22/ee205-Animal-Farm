@@ -22,10 +22,12 @@
 Cat* catDatabaseHeadPointer = nullptr;
 
 bool addCat(Cat* newCat){
-    newCat-> next = catDatabaseHeadPointer;
-    catDatabaseHeadPointer= newCat;
-    numCats++;
-    return true;
+    if (newCat != nullptr ) {
+        newCat->next = catDatabaseHeadPointer;
+        catDatabaseHeadPointer = newCat;
+        numCats++;
+        return true;
+    }
 }
 
 /*
