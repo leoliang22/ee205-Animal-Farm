@@ -15,7 +15,7 @@
 #include "addCats.h"
 #include <stdbool.h>
 #define PROGRAM_NAME "addCats.c"
-#define max_cats 1024
+
 
 //#define DEBUG
 
@@ -25,6 +25,7 @@ bool addCat(Cat* newCat){
     newCat-> next = catDatabaseHeadPointer;
     catDatabaseHeadPointer= newCat;
     numCats++;
+    return true;
 }
 
 /*

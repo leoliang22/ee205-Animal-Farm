@@ -19,7 +19,7 @@
 
 
 
-int main(void){
+int main(){
     std::cout <<"Starting Animal Farm 2" << std::endl;
     Cat Chili = Cat("Chili", MALE, SHORTHAIR, 1.5);
     Chili.print();

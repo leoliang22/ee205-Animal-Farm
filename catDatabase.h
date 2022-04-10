@@ -15,6 +15,7 @@
 #define MAX_LENGTH 50
 
 
+
 typedef float Weight;
 typedef size_t NumCats;
 
@@ -22,7 +23,7 @@ enum Genders {UNKNOWN_GENDER, MALE, FEMALE, OTHER};
 enum Breeds {UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 enum Color {BLACK, WHITE, RED, BLUE, GREEN, PINK};
 
-extern int max_cats;
+
 extern NumCats numCats;
 
 extern void initializeDatabase();

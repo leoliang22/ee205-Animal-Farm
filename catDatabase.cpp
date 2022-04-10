@@ -22,10 +22,10 @@
 //bool is_fixed[max_cats];
 //float catWeight[max_cats];
 using namespace std;
-/*
+
 NumCats numCats  = 0;
 
-
+/*
 void initializeDatabase(){
     numCats = 0;
     memset(&cats, 0, sizeof(cats));
@@ -40,6 +40,7 @@ bool isCatInDatabase( const char* name){
     return false;
 }
 */
+//getters and setters
 const char *Cat::getName() const {
     return name;
 }
@@ -82,6 +83,7 @@ void Cat::setWeight(Weight weight) {
     Cat::weight = weight;
 }
 
+//validation
 bool Cat::validateName(const char* newName) {
     if( newName == nullptr ){
         fprintf(stderr, "Cat Name cannot be empty");
@@ -95,6 +97,7 @@ bool Cat::validateName(const char* newName) {
         fprintf(stderr, "Cat name length cannot be <0");
         return false;
     }
+    return true;
 }
 
 bool Cat::validateGender(const Genders newGender) {
@@ -121,7 +124,7 @@ bool Cat::validateWeight(const Weight newWeight) {
     }
     return true;
 }
-
+//constructors and destructors
 Cat::Cat() {
     memset(name, 0, MAX_LENGTH );
     gender = UNKNOWN_GENDER ;
@@ -170,3 +173,5 @@ bool Cat::validate() {
     }
     return true;
 }
+
+
