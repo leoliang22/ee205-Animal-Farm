@@ -21,19 +21,19 @@
 
 int main(){
     std::cout <<"Starting Animal Farm 2" << std::endl;
-    Cat Chili = Cat("Chili", MALE, SHORTHAIR, 1.5);
+    //Cat Chili = Cat("Chili", MALE, SHORTHAIR, 1.5);
     //Chili.print();
     //Chili.setIsFixed();
     //Chili.print();
-    Cat Trin = Cat("Trin", FEMALE, MANX, 1.4);
+    //Cat Trin = Cat("Trin", FEMALE, MANX, 1.4);
     //Trin.print();
-    Cat Kali = Cat("Kali", FEMALE, SHORTHAIR, 1.3);
+    //Cat Kali = Cat("Kali", FEMALE, SHORTHAIR, 1.3);
     //Kali.print();
-    Cat Bella = Cat("Bella", FEMALE, MAINE_COON, 1.2);
+    //Cat Bella = Cat("Bella", FEMALE, MAINE_COON, 1.2);
     //Bella.print();
-    Cat Milo = Cat("Milo", MALE, MANX, 1.1);
+    //Cat Milo = Cat("Milo", MALE, MANX, 1.1);
     //Milo.print();
-    Cat Loki = Cat("Loki", MALE, PERSIAN, 1);
+    //Cat Loki = Cat("Loki", MALE, PERSIAN, 1);
     //Loki.print();
     bool result ;
     result = addCat( new Cat( "Loki", MALE, PERSIAN, 1.0 )) ;
@@ -42,6 +42,8 @@ int main(){
     result = addCat( new Cat( "Kali", FEMALE, SHORTHAIR, 1.3 )) ;
     result = addCat( new Cat( "Trin", FEMALE, MANX, 1.4 )) ;
     result = addCat( new Cat( "Chili", MALE, SHORTHAIR, 1.5 )) ;
+    printAllCats();
+    deleteAllCats();
     printAllCats();
 
   /*  addCat( "Loki", MALE, PERSIAN, true, 8.5, BLACK, WHITE, 101 ) ;
