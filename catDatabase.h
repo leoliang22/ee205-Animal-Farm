@@ -28,6 +28,7 @@ extern NumCats numCats;
 
 extern void initializeDatabase();
 extern bool isCatInDatabase(const char* name);
+extern bool validateDatabase();
 
 
 

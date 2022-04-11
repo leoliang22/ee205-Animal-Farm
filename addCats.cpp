@@ -28,6 +28,7 @@ bool addCat(Cat* newCat){
         numCats++;
         return true;
     }
+    return false;
 }
 
 /*
