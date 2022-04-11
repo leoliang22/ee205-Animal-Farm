@@ -14,6 +14,7 @@
 #include "catDatabase.h"
 #include "updateCats.h"
 #include "config.h"
+#include "addCats.h"
 
 /*
 int updateCatName(int index, const char* newName){
@@ -62,3 +63,12 @@ int updateLicense(int index, int licen_num){
     return 1;
 }
 */
+
+Cat* findCatByName(const char* name){
+    for(Cat* cats_iterated= catDatabaseHeadPointer; cats_iterated != nullptr; cats_iterated = cats_iterated->next){
+        if(strcmp(name, cats_iterated-> getName())==0){
+            return cats_iterated;
+        }
+    }
+    return nullptr;
+}
