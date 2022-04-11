@@ -41,3 +41,10 @@ bool deleteCat(Cat* removeableCat){
     }
     return false;
 }
+
+bool deleteAlLCats(){
+    while(catDatabaseHeadPointer != nullptr){
+        deleteCat(catDatabaseHeadPointer);
+    }
+    return true;
+}
