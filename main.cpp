@@ -16,7 +16,7 @@
 #include "deleteCats.h"
 #include "reportCats.h"
 #include "updateCats.h"
-
+#define TEST
 
 
 int main(){
@@ -44,8 +44,21 @@ int main(){
     result = addCat( new Cat( "Chili", MALE, SHORTHAIR, 1.5 )) ;
     printAllCats();
     deleteAllCats();
-    result = addCat( new Cat( "Loki", MALE, PERSIAN, 1.0 )) ;
     printAllCats();
+
+#ifdef TEST
+    Cat test = Cat();
+    test.print();
+    test.validate();
+    test.setName(nullptr);
+    test.setName("");
+    test.setName("1");
+    test.print();
+    test.setGender(MALE);
+    test.print();
+
+    test.print();
+#endif
 
   /*  addCat( "Loki", MALE, PERSIAN, true, 8.5, BLACK, WHITE, 101 ) ;
     addCat( "Milo", MALE, MANX, true, 7.0, BLACK, RED, 102 ) ;
