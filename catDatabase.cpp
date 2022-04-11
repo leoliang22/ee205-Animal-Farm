@@ -57,7 +57,12 @@ Genders Cat::getGender() const {
 }
 
 void Cat::setGender(Genders gender) {
-    Cat::gender = gender;
+    if(Cat::gender== UNKNOWN_GENDER) {
+        Cat::gender = gender;
+    }
+    else {
+        std::cout << "Cat cannot change gender" << std::endl;
+    }
 }
 
 Breeds Cat::getBreed() const {
@@ -65,7 +70,12 @@ Breeds Cat::getBreed() const {
 }
 
 void Cat::setBreed(Breeds breed) {
-    Cat::breed = breed;
+    if(Cat::breed== UNKNOWN_BREED) {
+        Cat::breed = breed;
+    }
+    else {
+        std::cout << "Cat cannot change breed" << std::endl;
+    }
 }
 
 bool Cat::isFixed() const {

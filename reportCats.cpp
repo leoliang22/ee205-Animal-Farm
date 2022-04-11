@@ -76,7 +76,7 @@ const char* genderName(const enum Genders gender){
 }
 const char *breedName(const enum Breeds breed){
     switch (breed){
-        case UNKNOWN_BREED: return "Unkown";
+        case UNKNOWN_BREED: return "Unknown";
         case MAINE_COON:    return "Maine Coon";
         case MANX:          return "Manx";
         case SHORTHAIR:     return "Shorthair";

@@ -53,11 +53,16 @@ int main(){
     test.setName(nullptr);
     test.setName("");
     test.setName("1");
-    test.print();
     test.setGender(MALE);
     test.print();
-
+    test.setGender(FEMALE);
     test.print();
+    test.setWeight(0);
+    test.setWeight(1/1024);
+    Cat *pBella = findCatByName("Bella");
+    Cat *pBelinda = findCatByName("Belinda");
+    deleteCat(pBella);
+    deleteCat(pBella);
 #endif
 
   /*  addCat( "Loki", MALE, PERSIAN, true, 8.5, BLACK, WHITE, 101 ) ;
