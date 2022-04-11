@@ -15,12 +15,6 @@
 #include <string.h>
 #include <iostream>
 
-/*
-void deleteAllCatsOld(void){
-    numCats=0;
-    memset(&cats, 0, sizeof(cats));
-}
-*/
 
 bool deleteCat(Cat* removableCat){
     if(removableCat == nullptr){

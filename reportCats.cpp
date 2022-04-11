@@ -16,55 +16,6 @@
 #include<stdbool.h>
 #include <iostream>
 
-/*
-
-int printCat(int index){
-    if(index<0){
-        fprintf(stderr, "reportCats.c: animalFarm0: Bad cat [%d]" ,index);
-    }
-    else if(index> numCats){
-        fprintf(stderr, "reportCats.c: animalFarm0: Bad cat [%d]" ,index);
-    }
-    else{
-        std::cout << "cat index = [" << index << "] ";
-        std::cout <<"name =[" << cats[index].name << "] ";
-        std::cout << "gender = [" << genderName(cats[index].gender) << "] ";
-        std::cout << "breed =[" << breedName(cats[index].breed) << "] ";
-        std::cout << "isFixed = [" << cats[index].is_fixed << "] ";
-        std::cout << "weight = [" << cats[index].weight << "] ";
-        std::cout <<"color1 = [" << collarColorName(cats[index].collarColor1) << "] ";
-        std::cout <<"color2 = [" << collarColorName(cats[index].collarColor2) << "] ";
-        std::cout << "License Number = [" << cats[index].license << "] " << std::endl;
-
-
-    }
-    return 0;
-}
-
-void printAllCats_old(){
-    for (int i=0; i < numCats; i++){
-        std::cout << "cat index = [" << i << "] ";
-        std::cout <<"name =[" << cats[i].name << "] ";
-        std::cout << "gender = [" << genderName(cats[i].gender) << "] ";
-        std::cout << "breed =[" << breedName(cats[i].breed) << "] ";
-        std::cout << "isFixed = [" << cats[i].is_fixed << "] ";
-        std::cout << "weight = [" << cats[i].weight << "] ";
-        std::cout <<"color1 = [" << collarColorName(cats[i].collarColor1) << "] ";
-        std::cout <<"color2 = [" << collarColorName(cats[i].collarColor2) << "] ";
-        std::cout << "License Number = [" << cats[i].license << "] " << std::endl;
-
-    }
-}
-int findCat(const char* name){
-    for( size_t i = 0; i < numCats; i++) {
-        if(strncmp(name, cats[i].name, MAX_LENGTH) == 0){
-            return i;
-        }
-    }
-    return 0;
-}
-*/
-
 const char* genderName(const enum Genders gender){
     switch( gender ) {
         case UNKNOWN_GENDER: return "Unknown";

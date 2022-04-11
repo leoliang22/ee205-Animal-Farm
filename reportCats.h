@@ -19,9 +19,8 @@ extern bool is_fixed[];
 
 
 
-extern int printCat(int index);
+
 extern bool printAllCats();
-extern int findCat(const char* name);
 extern const char* genderName(const enum Genders gender);
 extern const char* breedName(const enum Breeds breed);
 extern const char* collarColorName(const enum Color color);

@@ -16,53 +16,7 @@
 #include "config.h"
 #include "addCats.h"
 
-/*
-int updateCatName(int index, const char* newName){
-    if(strlen(newName) == 0){
-        fprintf(stderr, "Cat name cannot be empty. \n");
-        return 0;
-    }
-    if(isCatInDatabase(newName) == true){
-        fprintf(stderr, "Update Cats: Cat name [%s] is already in the database.\n", newName);
-        return 0;
-    }
-    else{
-        memset(cats[index].name, 0, MAX_LENGTH);
-        strcpy(cats[index].name, newName);
-        return 0;
-    }
-}
 
-int fixCat(int index){
-    cats[index].is_fixed=1;
-    return 0;
-}
-
-int updateCatWeight(int index, Weight newWeight){
-    if (newWeight < 0){
-        return 1;
-    }
-    else{
-        cats[index].weight= newWeight;
-        return 0;
-    }
-}
-
-int updateCatCollar1(int index, const enum Color collar1){
-    cats[index].collarColor1 = collar1;
-    return 1;
-}
-
-int updateCatCollar2(int index, const enum Color collar2){
-    cats[index].collarColor2 = collar2;
-    return 1;
-}
-
-int updateLicense(int index, int licen_num){
-    cats[index].license = licen_num;
-    return 1;
-}
-*/
 
 Cat* findCatByName(const char* name){
     for(Cat* cats_iterated= catDatabaseHeadPointer; cats_iterated != nullptr; cats_iterated = cats_iterated->next){

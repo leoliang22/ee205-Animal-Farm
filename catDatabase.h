@@ -26,22 +26,11 @@ enum Color {BLACK, WHITE, RED, BLUE, GREEN, PINK};
 
 extern NumCats numCats;
 
-extern void initializeDatabase();
-extern bool isCatInDatabase(const char* name);
+e
 extern bool validateDatabase();
 
 
 
-/*struct Cat{
-    char name[MAX_LENGTH];
-    enum Genders gender;
-    enum Breeds breed;
-    bool is_fixed;
-    Weight weight;
-    enum Color collarColor1;
-    enum Color collarColor2;
-    unsigned long long license;
-};*/
 
 class Cat{
         //the traits of the cat we are recording
@@ -93,4 +82,3 @@ class Cat{
 };
 
 
-extern struct Cat cats[MAX_LENGTH];

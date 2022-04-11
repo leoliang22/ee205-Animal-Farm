@@ -17,30 +17,13 @@
 #include <string.h>
 #include <iostream>
 #include <iomanip>
-//char catNames[max_cats][MAX_LENGTH];
-//enum Genders catGender[max_cats];
-//enum Breeds catBreed[max_cats];
-//bool is_fixed[max_cats];
-//float catWeight[max_cats];
+
+
 using namespace std;
 
 NumCats numCats  = 0;
 
-/*
-void initializeDatabase(){
-    numCats = 0;
-    memset(&cats, 0, sizeof(cats));
-}
 
-bool isCatInDatabase( const char* name){
-    for (size_t i =0; i < numCats ; i++) {
-        if (strncmp(cats[i].name, name, MAX_LENGTH) == 0) {
-            return true;
-        }
-    }
-    return false;
-}
-*/
 //getters and setters
 const char *Cat::getName() const {
     return name;
