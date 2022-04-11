@@ -12,5 +12,6 @@
 #include <stdio.h>
 
 extern NumCats numCats;
+extern Cat* catDatabaseHeadPointer;
 extern bool deleteAllCats();
-extern bool deleteCat(Cat* removeableCat);
+extern bool deleteCat(Cat* removableCat);

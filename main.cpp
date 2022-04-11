@@ -44,6 +44,7 @@ int main(){
     result = addCat( new Cat( "Chili", MALE, SHORTHAIR, 1.5 )) ;
     printAllCats();
     deleteAllCats();
+    result = addCat( new Cat( "Loki", MALE, PERSIAN, 1.0 )) ;
     printAllCats();
 
   /*  addCat( "Loki", MALE, PERSIAN, true, 8.5, BLACK, WHITE, 101 ) ;

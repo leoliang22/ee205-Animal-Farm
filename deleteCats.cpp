@@ -13,6 +13,7 @@
 #include "deleteCats.h"
 #include "addCats.h"
 #include <string.h>
+#include <iostream>
 
 /*
 void deleteAllCatsOld(void){
@@ -21,26 +22,32 @@ void deleteAllCatsOld(void){
 }
 */
 
-bool deleteCat(Cat* removeableCat){
-    if (removeableCat == nullptr)
+bool deleteCat(Cat* removableCat){
+    if(removableCat == nullptr){
+        return false;
+    }
+    if (removableCat == catDatabaseHeadPointer)
     {
         catDatabaseHeadPointer = catDatabaseHeadPointer->next;
-        delete removeableCat;
+        delete removableCat;
         numCats--;
         return true;
     }
 
     Cat* cats_iterated = catDatabaseHeadPointer;
+    std::cout << "typing cats_iterated";
     while(cats_iterated != nullptr){
-        if(catDatabaseHeadPointer->next == removeableCat){
-            cats_iterated-> next = removeableCat -> next;
-            delete removeableCat;
+        if(cats_iterated->next == removableCat){
+            cats_iterated ->next = removableCat->next;
+            delete removableCat;
             numCats--;
             return true;
         }
     }
     return false;
 }
+
+
 
 bool deleteAllCats(){
     while(catDatabaseHeadPointer != nullptr){
