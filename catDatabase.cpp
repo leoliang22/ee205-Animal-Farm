@@ -87,15 +87,15 @@ void Cat::setWeight(Weight weight) {
 //validation
 bool Cat::validateName(const char* newName) {
     if( newName == nullptr ){
-        fprintf(stderr, "Cat Name cannot be empty");
+        fprintf(stderr, "Cat Name cannot be empty \n");
         return false;
     }
     if(strlen(newName) > MAX_LENGTH){
-        fprintf(stderr, "Cat name cannot be greater than [%d]", MAX_LENGTH);
+        fprintf(stderr, "Cat name cannot be greater than [%d] \n", MAX_LENGTH);
         return false;
     }
-    if( strlen(newName) < 0){
-        fprintf(stderr, "Cat name length cannot be <0");
+    if( strlen(newName) <= 0){
+        fprintf(stderr, "Cat name length cannot be <0 \n");
         return false;
     }
     return true;
@@ -103,7 +103,7 @@ bool Cat::validateName(const char* newName) {
 
 bool Cat::validateGender(const Genders newGender) {
     if (newGender == UNKNOWN_GENDER){
-        fprintf(stderr,"Gender of cat must be known");
+        fprintf(stderr,"Gender of cat must be known \n");
         return false;
     }
     return true;
@@ -112,7 +112,7 @@ bool Cat::validateGender(const Genders newGender) {
 bool Cat::validateBreed(const Breeds newBreed) {
     if (newBreed == UNKNOWN_BREED)
     {
-        fprintf(stderr, "Breed of cat must be known");
+        fprintf(stderr, "Breed of cat must be known \n");
         return false;
     }
     return true;
@@ -120,7 +120,7 @@ bool Cat::validateBreed(const Breeds newBreed) {
 
 bool Cat::validateWeight(const Weight newWeight) {
     if ( newWeight < 0){
-        fprintf(stderr, "Weight of cat must be >0");
+        fprintf(stderr, "Weight of cat must be >0 \n");
         return false;
     }
     return true;

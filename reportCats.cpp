@@ -98,11 +98,12 @@ const char *collarColorName(const enum Color color){
 }
 
 bool printAllCats(){
-    int listNumCats;
+    if(catDatabaseHeadPointer == nullptr) {
+        return false;
+    }
     for(Cat* cats_iterated= catDatabaseHeadPointer; cats_iterated != nullptr; cats_iterated = cats_iterated->next)
     {
-        catDatabaseHeadPointer->print();
-        listNumCats++;
+        cats_iterated->print();
     }
     return true;
 }
