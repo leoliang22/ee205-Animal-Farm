@@ -12,4 +12,4 @@
 #include <stdio.h>
 
 extern NumCats numCats;
-extern void deleteAllCats();
+extern bool deleteAllCats(Cat* removableCat);

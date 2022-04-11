@@ -11,6 +11,7 @@
 #include<stdio.h>
 #include "catDatabase.h"
 #include "deleteCats.h"
+#include "addCats.h"
 #include <string.h>
 
 /*
@@ -19,3 +20,24 @@ void deleteAllCats(void){
     memset(&cats, 0, sizeof(cats));
 }
 */
+
+bool deleteCat(Cat* removeableCat){
+    if (removeableCat == nullptr)
+    {
+        catDatabaseHeadPointer = catDatabaseHeadPointer->next;
+        delete removeableCat;
+        numCats--;
+        return true;
+    }
+
+    Cat* cats_iterated = catDatabaseHeadPointer;
+    while(cats_iterated != nullptr){
+        if(catDatabaseHeadPointer->next == removeableCat){
+            cats_iterated-> next = removeableCat -> next;
+            delete removeableCat;
+            numCats--;
+            return true;
+        }
+    }
+    return false;
+}
