@@ -13,6 +13,7 @@
 #include <stdbool.h>
 #include "config.h"
 #include "reportCats.h"
+#include "addCats.h"
 #include <string.h>
 #include <iostream>
 #include <iomanip>
@@ -175,3 +176,13 @@ bool Cat::validate() {
 }
 
 
+bool validateDatabase(){
+    for(Cat* cats_iterated= catDatabaseHeadPointer; cats_iterated != nullptr; cats_iterated = cats_iterated->next){
+        if (!cats_iterated->validate())
+        {
+            return false;
+        }
+        return true;
+    }
+
+}
