@@ -15,7 +15,7 @@
 #include <string.h>
 
 /*
-void deleteAllCats(void){
+void deleteAllCatsOld(void){
     numCats=0;
     memset(&cats, 0, sizeof(cats));
 }
@@ -42,7 +42,7 @@ bool deleteCat(Cat* removeableCat){
     return false;
 }
 
-bool deleteAlLCats(){
+bool deleteAllCats(){
     while(catDatabaseHeadPointer != nullptr){
         deleteCat(catDatabaseHeadPointer);
     }
