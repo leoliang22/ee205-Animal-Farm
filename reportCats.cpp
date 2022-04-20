@@ -36,17 +36,19 @@ const char *breedName(const enum Breeds breed){
     }
     return 0;
 }
+
 const char *collarColorName(const enum Color color){
     switch (color){
-        case BLACK:       return "Black";
-        case WHITE:       return "White";
-        case RED:         return "Red";
-        case BLUE:        return "Blue";
-        case GREEN:       return "Green";
-        case PINK:        return "Pink";
+        case Color::BLACK:       return "Black";
+        case Color::WHITE:       return "White";
+        case Color::RED:         return "Red";
+        case Color::BLUE:        return "Blue";
+        case Color::GREEN:       return "Green";
+        case Color::PINK:        return "Pink";
     }
     return 0;
 }
+
 
 bool printAllCats(){
     if(catDatabaseHeadPointer == nullptr) {

@@ -22,7 +22,7 @@ typedef size_t NumCats;
 
 //enum Genders {UNKNOWN_GENDER, MALE, FEMALE, OTHER};
 enum Breeds {UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
-enum Color {BLACK, WHITE, RED, BLUE, GREEN, PINK};
+//enum Color {BLACK, WHITE, RED, BLUE, GREEN, PINK};
 
 
 extern NumCats numCats;
@@ -39,6 +39,14 @@ enum class Genders {
     ,FEMALE
 };
 
+enum class Color{
+    BLACK=0,
+    WHITE,
+    RED,
+    BLUE,
+    GREEN,
+    PINK
+};
 
 
 class Cat{
