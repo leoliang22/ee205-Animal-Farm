@@ -9,7 +9,8 @@
 /// @date   20_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
-
+#include <iostream>
+#include <iomanip>
 #define MAX_CATS 1024
 #define PROGRAM_NAME "Animal Farm 3"
 
