@@ -26,7 +26,7 @@ enum Color {BLACK, WHITE, RED, BLUE, GREEN, PINK};
 
 extern NumCats numCats;
 
-e
+
 extern bool validateDatabase();
 
 
