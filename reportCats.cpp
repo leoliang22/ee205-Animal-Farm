@@ -60,3 +60,14 @@ bool printAllCats(){
     }
     return true;
 }
+
+Cat* findCatByName(const std::string * name){
+    for(Cat* cats_iterated= catDatabaseHeadPointer; cats_iterated != nullptr; cats_iterated = cats_iterated->next){
+        //if(strcmp(name, cats_iterated-> getName())==0)
+        if(cats_iterated -> getName() == name)
+        {
+            return cats_iterated;
+        }
+    }
+    return nullptr;
+}

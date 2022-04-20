@@ -24,3 +24,4 @@ extern bool printAllCats();
 extern const char* genderName(const enum Genders gender);
 extern const char* breedName(const enum Breeds breed);
 extern const char* collarColorName(const enum Color color);
+extern Cat* findCatByName(const char* name);
