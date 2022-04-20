@@ -21,7 +21,7 @@ bool List::empty() const noexcept {
 }
 
 unsigned int List::size() noexcept {
-    for(Node* cats_iterated= head; cats_iterated != nullptr; cats_iterated = cats_iterated->next){
+    for(Node* iNode= head; iNode != nullptr; iNode = iNode->next){
         count += 1;
     }
     return count;
@@ -33,7 +33,10 @@ Node *List::get_first() const noexcept {
 }
 
 bool List::isIn(Node *aNode) const {
-    //@TODO add is in
+    for(Node* iNode= head; iNode != nullptr; iNode = iNode->next)
+        if( iNode == aNode) {
+            return true;
+        }
     return false;
 }
 
