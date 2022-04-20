@@ -10,4 +10,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "singlyLinkedList.h"
+#include "catDatabase.h"
 
+void SinglyLinkedList::push_front(Node *newNode) {
+    if (newNode != nullptr) {
+        newNode->next = head;
+        head = newNode;
+        numCats++;
+    }
+}

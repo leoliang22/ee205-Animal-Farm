@@ -28,5 +28,6 @@ protected:
     //@TODO CREATE LIST AND SINGLY LINKED LIST CLASS//friend:
     friend
     class List;
-    //SinglyLinkedList;
+    friend
+    class SinglyLinkedList;
 };
