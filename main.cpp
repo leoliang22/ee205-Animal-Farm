@@ -16,7 +16,6 @@
 #include "deleteCats.h"
 #include "reportCats.h"
 #include "updateCats.h"
-#define TEST
 
 
 int main(){
@@ -35,6 +34,7 @@ int main(){
     //Milo.print();
     //Cat Loki = Cat("Loki", MALE, PERSIAN, 1);
     //Loki.print();
+/*
     bool result ;
     result = addCat( new Cat( "Loki", MALE, PERSIAN, 1.0 )) ;
     result = addCat( new Cat( "Milo", MALE, MANX , 1.1 )) ;
@@ -45,6 +45,7 @@ int main(){
     printAllCats();
     deleteAllCats();
     printAllCats();
+*/
 
 #ifdef TEST
     Cat test = Cat();

@@ -1,16 +1,17 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  _ee205_lab_08d_animal_farm_1_to_clion - EE 205 - Spr 2022
+/// @brief  ee205_lab_13a_animal_farm_3 - EE 205 - Spr 2022
 ///
 /// @file catDatabase.h
 /// @version 1.0
 ///
 /// @author Leo Liang <leoliang@hawaii.edu>
-/// @date   20_Mar_2022
+/// @date   19_April_2022
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
 
 #include <stdbool.h>
+#include <stdexcept>
 #include "config.h"
 #define MAX_LENGTH 50
 
@@ -19,7 +20,7 @@
 typedef float Weight;
 typedef size_t NumCats;
 
-enum Genders {UNKNOWN_GENDER, MALE, FEMALE, OTHER};
+//enum Genders {UNKNOWN_GENDER, MALE, FEMALE, OTHER};
 enum Breeds {UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 enum Color {BLACK, WHITE, RED, BLUE, GREEN, PINK};
 
@@ -29,6 +30,14 @@ extern NumCats numCats;
 
 extern bool validateDatabase();
 
+
+/// A gender... for educational use only. This is not intended to be
+/// inclusive of all possible genders
+enum class Genders {
+    UNKNOWN_GENDER=0
+    ,MALE
+    ,FEMALE
+};
 
 
 

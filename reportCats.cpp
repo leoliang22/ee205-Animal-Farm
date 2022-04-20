@@ -18,10 +18,10 @@
 
 const char* genderName(const enum Genders gender){
     switch( gender ) {
-        case UNKNOWN_GENDER: return "Unknown";
-        case MALE:           return "Male";
-        case FEMALE:         return "Female" ;
-        case OTHER:          return "Other" ;
+        case Genders::UNKNOWN_GENDER: return "Unknown";
+        case Genders::MALE:           return "Male";
+        case Genders::FEMALE:         return "Female" ;
+        //case Genders::OTHER:          return "Other" ;
     }
     return 0;
 }

@@ -11,4 +11,4 @@
 #pragma once
 
 #define MAX_CATS 1024
-
+#define PROGRAM_NAME "Animal Farm 3"

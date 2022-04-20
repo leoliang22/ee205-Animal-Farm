@@ -40,7 +40,7 @@ Genders Cat::getGender() const {
 }
 
 void Cat::setGender(Genders gender) {
-    if(Cat::gender== UNKNOWN_GENDER) {
+    if(Cat::gender== Genders::UNKNOWN_GENDER) {
         Cat::gender = gender;
     }
     else {
@@ -95,7 +95,7 @@ bool Cat::validateName(const char* newName) {
 }
 
 bool Cat::validateGender(const Genders newGender) {
-    if (newGender == UNKNOWN_GENDER){
+    if (newGender == Genders::UNKNOWN_GENDER){
         fprintf(stderr,"Gender of cat must be known \n");
         return false;
     }
@@ -121,7 +121,7 @@ bool Cat::validateWeight(const Weight newWeight) {
 //constructors and destructors
 Cat::Cat() {
     memset(name, 0, MAX_LENGTH );
-    gender = UNKNOWN_GENDER ;
+    gender = Genders::UNKNOWN_GENDER ;
     breed = UNKNOWN_BREED ;
     is_fixed = false ;
     weight = -1 ;
@@ -137,7 +137,7 @@ Cat::Cat(const char* newName, const Genders newGender ,const Breeds newBreed ,co
 
 Cat::~Cat() {
     memset(name, 0, MAX_LENGTH );
-    gender = UNKNOWN_GENDER ;
+    gender = Genders::UNKNOWN_GENDER ;
     breed = UNKNOWN_BREED ;
     is_fixed = false ;
     weight = -1 ;
@@ -177,4 +177,31 @@ bool validateDatabase(){
         }
     }
     return true;
+}
+
+/// Output Gender as a formatted string
+///
+/// @param lhs_stream The output stream to write to (usually `cout`). `
+/// `lhs` stands for Left Hand Side and means the left side
+/// of the `<<` operator.
+/// @param rhs_Gender The Gender to output.
+/// `rhs` stands for Right Hand Side and means the right
+/// side of the `<<` operator.
+/// @return `Unknown gender`, `Female` or `Male`.
+inline std::ostream& operator<<( std::ostream& lhs_stream, const Genders& rhs_Gender ){
+    switch( rhs_Gender ) {
+        case Genders::UNKNOWN_GENDER:
+            lhs_stream << "Unknown gender";
+            break;
+        case Genders::MALE:
+            lhs_stream << "Male";
+            break;
+        case Genders::FEMALE:
+            lhs_stream << "Female";
+            break;
+        default:
+/// @throw out_of_range If the enum is not mapped to a string.
+            throw std::out_of_range( PROGRAM_NAME ": Gender not mapped to a string" );
+    }
+    return lhs_stream;
 }

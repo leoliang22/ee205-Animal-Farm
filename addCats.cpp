@@ -14,7 +14,7 @@
 #include "config.h"
 #include "addCats.h"
 #include <stdbool.h>
-#define PROGRAM_NAME "addCats.c"
+
 
 
 //#define DEBUG
