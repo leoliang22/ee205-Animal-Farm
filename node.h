@@ -26,6 +26,7 @@ protected:
     Node * 	next = nullptr;
 
     //@TODO CREATE LIST AND SINGLY LINKED LIST CLASS//friend:
-    //List;
+    friend
+    class List;
     //SinglyLinkedList;
 };

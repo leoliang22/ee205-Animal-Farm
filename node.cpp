@@ -19,9 +19,15 @@ PRINT_HEADING_FOR_DUMP;
 }
 
 bool Node::validate() const noexcept {
+    //@TODO add the validation for the node
     return false;
 }
 
 bool Node::operator>(const Node &rightSide) {
+    //@todo add the override for comparison
+    return false;
+}
+
+bool Node::compareByAddress(const Node *node1, const Node *node2) {
     return false;
 }
