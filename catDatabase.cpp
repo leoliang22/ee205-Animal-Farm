@@ -25,14 +25,14 @@ NumCats numCats  = 0;
 
 
 //getters and setters
-const char *Cat::getName() const {
+const std::string *Cat::getName() const {
     return name;
 }
 
-void Cat::setName(const char *newName) {
+void Cat::setName(std::string *newName) {
     validateName( newName );
     memset(name, 0 , MAX_LENGTH);
-    strcpy( name, newName);
+    Cat::name = newName;
 }
 
 Genders Cat::getGender() const {
@@ -78,16 +78,16 @@ void Cat::setWeight(Weight weight) {
 }
 
 //validation
-bool Cat::validateName(const char* newName) {
+bool Cat::validateName(std::string * newName) {
     if( newName == nullptr ){
         fprintf(stderr, "Cat Name cannot be empty \n");
         return false;
     }
-    if(strlen(newName) > MAX_LENGTH){
+    if((newName->size()) > MAX_LENGTH){
         fprintf(stderr, "Cat name cannot be greater than [%d] \n", MAX_LENGTH);
         return false;
     }
-    if( strlen(newName) <= 0){
+    if( (newName)->size() <= 0){
         fprintf(stderr, "Cat name length cannot be <0 \n");
         return false;
     }
@@ -128,7 +128,7 @@ Cat::Cat() {
     next = nullptr ;
 }
 
-Cat::Cat(const char* newName, const Genders newGender ,const Breeds newBreed ,const Weight newWeight){
+Cat::Cat(std::string* newName, const Genders newGender ,const Breeds newBreed ,const Weight newWeight){
     setName(newName);
     setGender(newGender);
     setBreed(newBreed);

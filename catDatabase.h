@@ -52,7 +52,7 @@ enum class Color{
 class Cat{
         //the traits of the cat we are recording
         protected:
-        char name[MAX_LENGTH];
+        std::string *name;
         enum Genders gender;
         enum Breeds breed;
         bool is_fixed;
@@ -64,8 +64,8 @@ class Cat{
 
         public:
         //name
-        const char *getName() const;
-        void setName(const char* newName);
+        const std::string *getName() const;
+        void setName(std::string* newName);
         //gender
         Genders getGender() const;
         void setGender(Genders gender);
@@ -81,7 +81,7 @@ class Cat{
 
         public:
         //validate functions
-        bool validateName(const char* newName);
+        bool validateName(std::string * newName);
         bool validateGender(const Genders newGender);
         bool validateBreed(const Breeds newBreed);
         bool validateWeight(const Weight newWeight);
@@ -89,7 +89,7 @@ class Cat{
         //constructors and destructors
         public:
         Cat();
-        Cat(const char* newName ,const Genders newGender ,const Breeds newBreed ,const Weight newWeight);
+        Cat(std::string* newName ,const Genders newGender ,const Breeds newBreed ,const Weight newWeight);
         virtual ~Cat();
 
         //print and validate
