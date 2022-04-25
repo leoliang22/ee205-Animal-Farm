@@ -27,6 +27,7 @@ Node *SinglyLinkedList::pop_front() noexcept {
         head = head->next;
         count--;
     }
+    return head;
 }
 
 void SinglyLinkedList::dump() const noexcept {

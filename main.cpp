@@ -20,6 +20,8 @@
 
 int main(){
     std::cout <<"Starting Animal Farm 3" << std::endl;
+
+
     //Cat Chili = Cat("Chili", MALE, SHORTHAIR, 1.5);
     //Chili.print();
     //Chili.setIsFixed();

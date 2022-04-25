@@ -19,8 +19,8 @@
 
 #endif //_EE205_LAB_08D_ANIMAL_FARM_1_TO_CLION_ANIMAL_H
 
-//const std::string Animal::KINGDOM_NAME = "Animalia";
-//const std::string Mammal::MAMMAL_NAME = "Mammilian";
+
+
 //const std::string Cat::SPECIES_NAME = "Felis Catus";
 //const Weight::t_weight Cat::MAX_WEIGHT = 40;
 
@@ -30,7 +30,7 @@ public:
     Animal (const Weight::t_weight newMaxWeight, const std::string &newClassification, const std::string &newSpecies);
     Animal (const Genders newGender, const Weight::t_weight newWeight, const Weight::t_weight newMaxWeight, const std::string &newClassification, const std::string &newSpecies);
 
-    std::string 	getKingdom () const noexcept;
+    std::string     getKingdom() const noexcept;
     std::string 	getClassification () const noexcept;
     std::string 	getSpecies () const noexcept;
 
@@ -46,11 +46,16 @@ public:
     static bool 	validateClassification (const std::string &checkClassification) noexcept;
     static bool 	validateSpecies (const std::string &checkSpecies) noexcept;
 
-    static const std::string 	KINGDOM_NAME = "Animalia";
+    static const std::string KINGDOM_NAME;
 
 private:
     std::string 	species;
     std::string 	classification;
     Genders	gender = Genders::UNKNOWN_GENDER;
-    Weight 	weight;
+    Weight weight;
 };
+
+
+
+
+

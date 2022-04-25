@@ -20,6 +20,7 @@
 class Node{
 public:
     virtual void 	dump () const{
+        PRINT_HEADING_FOR_DUMP;
         FORMAT_LINE_FOR_DUMP( "Node", "this" ) << this << std::endl ;
         FORMAT_LINE_FOR_DUMP( "Node", "next" ) << next << std::endl ;
     }

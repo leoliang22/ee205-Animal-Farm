@@ -62,8 +62,7 @@ float Weight::convertWeight(float fromWeight, Weight::UnitOfWeight fromUnit, Wei
         default: std::cout << "Unknown toUnit ";
             return false;
     }
-
-
+    return endUnit;
 }
 
 Weight::Weight( const Weight::UnitOfWeight newUnitOfWeight, const float newMaxWeight ) : Weight( newUnitOfWeight ){
