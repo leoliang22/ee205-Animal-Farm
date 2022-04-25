@@ -49,56 +49,6 @@ enum class Color {
 };
 
 
-class Cat{
-        //the traits of the cat we are recording
-        protected:
-        std::string *name;
-        enum Genders gender;
-        enum Breeds breed;
-        bool is_fixed;
-        Weight::t_weight weight;
-
-        //the pointer of the next cat
-        public:
-        Cat* next;
-
-        public:
-        //name
-        const std::string *getName() const;
-        void setName(std::string* newName);
-        //gender
-        Genders getGender() const;
-        void setGender(Genders gender);
-        //breed
-        Breeds getBreed() const;
-        void setBreed(Breeds breed);
-        //isCatFixed
-        bool isFixed() const;
-        void setIsFixed();
-        //Weight
-        Weight getWeight() const;
-        void setWeight(Weight::t_weight weight);
-
-        public:
-        //validate functions
-        bool validateName(std::string * newName);
-        bool validateGender(const Genders newGender);
-        bool validateBreed(const Breeds newBreed);
-        bool validateWeight(const Weight::t_weight newWeight);
-
-        //constructors and destructors
-        public:
-        Cat();
-        Cat(std::string* newName ,const Genders newGender ,const Breeds newBreed ,const Weight::t_weight newWeight);
-        virtual ~Cat();
-
-        //print and validate
-        bool print();
-
-        bool validate();
-};
-
-
 inline std::ostream& operator<<( std::ostream& lhs_stream, const Color& rhs_Color ) {
         switch( rhs_Color ) {
                 case Color::UNKNOWN_COLOR:

@@ -17,7 +17,7 @@
 #endif //_EE205_LAB_08D_ANIMAL_FARM_1_TO_CLION_LIST_H
 
 
-class List{
+class List: public Node{
 public:
     bool 	empty () const noexcept;
     unsigned int 	size () noexcept;

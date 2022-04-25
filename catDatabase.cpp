@@ -25,6 +25,7 @@ NumCats numCats  = 0;
 
 
 //getters and setters
+/*
 const std::string *Cat::getName() const {
     return name;
 }
@@ -179,3 +180,4 @@ bool validateDatabase(){
     return true;
 }
 
+*/

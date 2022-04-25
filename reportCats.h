@@ -12,6 +12,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "catDatabase.h"
+/*
 
 extern NumCats numCats;
 extern float catWeight[];
@@ -25,3 +26,4 @@ extern const char* genderName(const enum Genders gender);
 extern const char* breedName(const enum Breeds breed);
 extern const char* collarColorName(const enum Color color);
 extern Cat* findCatByName(const char* name);
+*/

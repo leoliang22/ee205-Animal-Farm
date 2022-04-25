@@ -11,6 +11,7 @@
 
 #include <cassert>
 #include "List.h"
+#include "Cat.h"
 
 
 bool List::empty() const noexcept {
@@ -61,4 +62,14 @@ void List::deleteAllNodes() noexcept {
     cout << PROGRAM_NAME << ": All Nodes have been deleted" << endl ;
 #endif
     assert( validate() );
+}
+
+
+bool List::validate() const noexcept {
+    Node::validate();
+    return false;
+}
+
+void List::dump() const noexcept {
+
 }

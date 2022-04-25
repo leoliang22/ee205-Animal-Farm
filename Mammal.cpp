@@ -23,6 +23,7 @@ void Mammal::setColor(const Color newColor) noexcept {
 }
 
 void Mammal::dump() const noexcept {
+    Animal::dump();
     FORMAT_LINE_FOR_DUMP( "Mammal", "color" ) << getColor() << std::endl ;
 }
 

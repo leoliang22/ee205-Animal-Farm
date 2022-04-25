@@ -18,6 +18,7 @@
 
 
 //#define DEBUG
+/*
 
 Cat* catDatabaseHeadPointer = nullptr;
 
@@ -31,3 +32,4 @@ bool addCat(Cat* newCat){
     return false;
 }
 
+*/

@@ -15,6 +15,7 @@
 #include <string.h>
 #include <iostream>
 
+/*
 
 bool deleteCat(Cat* removableCat){
     if(removableCat == nullptr){
@@ -48,4 +49,4 @@ bool deleteAllCats(){
         deleteCat(catDatabaseHeadPointer);
     }
     return true;
-}
+}*/

@@ -49,6 +49,7 @@ const char *collarColorName(const enum Color color){
     return 0;
 }
 
+/*
 
 bool printAllCats(){
     if(catDatabaseHeadPointer == nullptr) {
@@ -70,4 +71,4 @@ Cat* findCatByName(const std::string * name){
         }
     }
     return nullptr;
-}
+}*/

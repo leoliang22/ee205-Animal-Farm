@@ -15,11 +15,27 @@
 #include "addCats.h"
 #include "deleteCats.h"
 #include "reportCats.h"
-
+#include "singlyLinkedList.h"
+#include "Cat.h"
 
 
 int main(){
     std::cout <<"Starting Animal Farm 3" << std::endl;
+        SinglyLinkedList catDB ;
+        catDB.push_front( new Cat( "Loki", Color::CREAM, true, Genders::MALE, 1.0 ) ) ;
+        catDB.push_front( new Cat( "Milo", Color::BLACK, true, Genders::MALE, 1.1 ) ) ;
+        catDB.push_front( new Cat( "Bella", Color::BROWN, true, Genders::FEMALE, 1.2 ) ) ;
+        catDB.push_front( new Cat( "Kali", Color::CALICO, true, Genders::FEMALE, 1.3 ) ) ;
+        catDB.push_front( new Cat( "Trin", Color::WHITE, true, Genders::FEMALE, 1.4 ) ) ;
+        catDB.insert_after(catDB.get_first(), new Cat( "Chili", Color::GINGER, true,
+                                                   Genders::MALE, 1.5 ) );
+        catDB.dump();
+        for( Animal* pAnimal = (Animal*)catDB.get_first() ; pAnimal != nullptr ; pAnimal =
+                                                                                     (Animal*)List::get_next( (Node*)pAnimal ) ) {
+        std::cout << pAnimal->speak() << std::endl;
+    }
+        catDB.deleteAllNodes();
+        catDB.dump();
 
 
     //Cat Chili = Cat("Chili", MALE, SHORTHAIR, 1.5);

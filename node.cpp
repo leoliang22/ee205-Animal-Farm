@@ -19,14 +19,11 @@ bool Node::validate() const noexcept {
     if(next == nullptr){
         return true;
     }
-    return false;
+    return true;
 }
 
 bool Node::operator>(const Node &rightSide) {
-    //@todo add the override for comparison
+    return compareByAddress( this, &(Node&)rightSide );
     return false;
 }
 
-bool Node::compareByAddress(const Node *node1, const Node *node2) {
-    return false;
-}

@@ -8,7 +8,7 @@
 /// @author Leo Liang <leoliang@hawaii.edu>
 /// @date   19_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
-
+#pragma once
 #include <string>
 #include "Weight.h"
 #include "node.h"
@@ -21,11 +21,9 @@
 
 
 
-//const std::string Cat::SPECIES_NAME = "Felis Catus";
-//const Weight::t_weight Cat::MAX_WEIGHT = 40;
 
 
-class Animal: public Node {
+class Animal: public Node{
 public:
     Animal (const Weight::t_weight newMaxWeight, const std::string &newClassification, const std::string &newSpecies);
     Animal (const Genders newGender, const Weight::t_weight newWeight, const Weight::t_weight newMaxWeight, const std::string &newClassification, const std::string &newSpecies);

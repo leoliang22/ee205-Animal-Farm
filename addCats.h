@@ -17,6 +17,8 @@
 
 extern NumCats numCats;
 
+/*
 extern Cat* catDatabaseHeadPointer;
 
 extern bool addCat(Cat* newCat);
+*/

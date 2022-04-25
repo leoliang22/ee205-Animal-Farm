@@ -10,8 +10,9 @@
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
 #include <stdio.h>
+/*
 
 extern NumCats numCats;
 extern Cat* catDatabaseHeadPointer;
 extern bool deleteAllCats();
-extern bool deleteCat(Cat* removableCat);
+extern bool deleteCat(Cat* removableCat);*/
