@@ -46,7 +46,10 @@ Node *List::get_next(const Node *currentNode) {
 }
 
 bool List::isSorted() const noexcept {
-    //@TODO add isSorted
+    for(Node* iNode= head; iNode != nullptr; iNode = iNode->next)
+        if( iNode < iNode->next){
+            return true;
+        }
     return false;
 }
 
@@ -70,6 +73,3 @@ bool List::validate() const noexcept {
     return false;
 }
 
-void List::dump() const noexcept {
-
-}

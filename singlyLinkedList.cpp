@@ -17,7 +17,6 @@
 
 void SinglyLinkedList::push_front(Node *newNode) {
     if (newNode != nullptr) {
-        //@TODO maybe learn to throw exceptions
         newNode->next = head;
         head = newNode;
         next= head->next;
@@ -43,6 +42,7 @@ void SinglyLinkedList::dump() const noexcept {
 
 bool SinglyLinkedList::validate() const noexcept {
     Node::validate();
+    return true;
 }
 
 SinglyLinkedList::SinglyLinkedList() {
@@ -50,10 +50,10 @@ SinglyLinkedList::SinglyLinkedList() {
 }
 
 void SinglyLinkedList::insert_after(Node *currentNode, Node *newNode) {
-    Node *temp;
-    temp = currentNode->next;
-    currentNode->next = newNode;
-    newNode->next = temp;
-    head = newNode;
-    numCats++;
+    for(Node* iNode= head; iNode != nullptr; iNode = iNode->next)
+        if(iNode == currentNode){
+            Node *temp = currentNode->next;
+            currentNode->next = newNode;
+            newNode->next = temp;
+        }
 }
