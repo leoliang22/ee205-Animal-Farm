@@ -11,7 +11,6 @@
 #pragma once
 #include <iostream>
 #include <iomanip>
-#define MAX_CATS 1024
 #define PROGRAM_NAME "Animal Farm 3"
 
 /// Format the heading for dumping members of a class to the console

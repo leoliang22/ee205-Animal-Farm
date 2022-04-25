@@ -63,5 +63,4 @@ public:
 
         Cat::validate();
     }
-    friend class SinglyLinkedList;
 };
