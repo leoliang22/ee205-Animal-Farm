@@ -16,7 +16,9 @@
 
 
 bool Node::validate() const noexcept {
-    //@TODO add the validation for the node
+    if(next == nullptr){
+        return true;
+    }
     return false;
 }
 

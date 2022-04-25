@@ -19,7 +19,7 @@
 
 
 int main(){
-    std::cout <<"Starting Animal Farm 2" << std::endl;
+    std::cout <<"Starting Animal Farm 3" << std::endl;
     //Cat Chili = Cat("Chili", MALE, SHORTHAIR, 1.5);
     //Chili.print();
     //Chili.setIsFixed();
@@ -88,6 +88,6 @@ int main(){
     deleteAllCats();
     printAllCats();
 */
-    std::cout <<"Done with Animal Farm 2" << std::endl;
+    std::cout <<"Done with Animal Farm 3" << std::endl;
 }
 

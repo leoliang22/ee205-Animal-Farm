@@ -12,6 +12,7 @@
 #include "singlyLinkedList.h"
 #include "catDatabase.h"
 
+
 void SinglyLinkedList::push_front(Node *newNode) {
     if (newNode != nullptr) {
         //@TODO maybe learn to throw exceptions

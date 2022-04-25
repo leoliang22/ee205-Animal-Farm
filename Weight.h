@@ -21,6 +21,8 @@ public: ////////////// Enumerations //////////////
         POUND, KILO, SLUG
     };
 
+    typedef float t_weight;
+
 private:
     float weight{};
     float maxWeight{};

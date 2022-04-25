@@ -73,7 +73,7 @@ Weight Cat::getWeight() const {
     return weight;
 }
 
-void Cat::setWeight(Weight weight) {
+void Cat::setWeight(Weight::t_weight weight) {
     Cat::weight = weight;
 }
 
@@ -111,7 +111,7 @@ bool Cat::validateBreed(const Breeds newBreed) {
     return true;
 }
 
-bool Cat::validateWeight(const Weight newWeight) {
+bool Cat::validateWeight(const Weight::t_weight newWeight) {
     if ( newWeight < 0){
         fprintf(stderr, "Weight of cat must be >0 \n");
         return false;
@@ -128,7 +128,7 @@ Cat::Cat() {
     next = nullptr ;
 }
 
-Cat::Cat(std::string* newName, const Genders newGender ,const Breeds newBreed ,const Weight newWeight){
+Cat::Cat(std::string* newName, const Genders newGender ,const Breeds newBreed ,const Weight::t_weight newWeight){
     setName(newName);
     setGender(newGender);
     setBreed(newBreed);
@@ -154,7 +154,7 @@ bool Cat::print(){
     FORMAT_LINE( "Cat", "gender" ) << genderName( getGender() ) << endl ;
     FORMAT_LINE( "Cat", "breed" ) << breedName( getBreed() ) << endl ;
     FORMAT_LINE( "Cat", "isFixed" ) << isFixed() << endl ;
-    FORMAT_LINE( "Cat", "weight" ) << getWeight() << endl ;
+    //FORMAT_LINE( "Cat", "weight" ) << getWeight() << endl ;
     return true ;
 }
 

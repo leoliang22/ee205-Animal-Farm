@@ -40,7 +40,7 @@ bool List::isIn(Node *aNode) const {
 }
 
 Node *List::get_next(const Node *currentNode) {
-    Node *lhs = currentNode->next;
+    Node * lhs = currentNode -> next;
     return lhs;
 }
 

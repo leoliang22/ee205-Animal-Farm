@@ -13,11 +13,14 @@
 #include <stdbool.h>
 #include <stdexcept>
 #include "config.h"
+#include "Weight.h"
+
 #define MAX_LENGTH 50
 
 
 
-typedef float Weight;
+//typedef float Weight;
+
 typedef size_t NumCats;
 
 //enum Genders {UNKNOWN_GENDER, MALE, FEMALE, OTHER};
@@ -53,7 +56,7 @@ class Cat{
         enum Genders gender;
         enum Breeds breed;
         bool is_fixed;
-        Weight weight;
+        Weight::t_weight weight;
 
         //the pointer of the next cat
         public:
@@ -74,19 +77,19 @@ class Cat{
         void setIsFixed();
         //Weight
         Weight getWeight() const;
-        void setWeight(Weight weight);
+        void setWeight(Weight::t_weight weight);
 
         public:
         //validate functions
         bool validateName(std::string * newName);
         bool validateGender(const Genders newGender);
         bool validateBreed(const Breeds newBreed);
-        bool validateWeight(const Weight newWeight);
+        bool validateWeight(const Weight::t_weight newWeight);
 
         //constructors and destructors
         public:
         Cat();
-        Cat(std::string* newName ,const Genders newGender ,const Breeds newBreed ,const Weight newWeight);
+        Cat(std::string* newName ,const Genders newGender ,const Breeds newBreed ,const Weight::t_weight newWeight);
         virtual ~Cat();
 
         //print and validate
