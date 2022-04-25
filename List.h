@@ -10,6 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "node.h"
+#include "catDatabase.h"
 
 #ifndef _EE205_LAB_08D_ANIMAL_FARM_1_TO_CLION_LIST_H
 #define _EE205_LAB_08D_ANIMAL_FARM_1_TO_CLION_LIST_H
@@ -34,4 +35,5 @@ public:
 protected:
     Node * 	head = nullptr;
     unsigned int 	count = 0;
+    NumCats numCats  = 0;
 };

@@ -12,7 +12,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "catDatabase.h"
-#include "addCats.h"
 #include "deleteCats.h"
 #include "reportCats.h"
 #include "singlyLinkedList.h"
