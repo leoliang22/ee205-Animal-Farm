@@ -44,7 +44,7 @@ const char *collarColorName(const enum Color color){
         case Color::RED:         return "Red";
         case Color::BLUE:        return "Blue";
         case Color::GREEN:       return "Green";
-        case Color::PINK:        return "Pink";
+        //case Color::PINK:        return "Pink";
     }
     return 0;
 }

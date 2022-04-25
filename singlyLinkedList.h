@@ -16,7 +16,7 @@
 
 #endif //_EE205_LAB_08D_ANIMAL_FARM_1_TO_CLION_SINGLYLINKEDLIST_H
 
-class SinglyLinkedList:List{
+class SinglyLinkedList: public List{
 public:
     SinglyLinkedList ();
     void 	push_front (Node *newNode);

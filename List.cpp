@@ -28,8 +28,7 @@ unsigned int List::size() noexcept {
 }
 
 Node *List::get_first() const noexcept {
-    //@TODO add get first
-    return nullptr;
+    return head;
 }
 
 bool List::isIn(Node *aNode) const {
@@ -40,16 +39,24 @@ bool List::isIn(Node *aNode) const {
     return false;
 }
 
+Node *List::get_next(const Node *currentNode) {
+    Node *lhs = currentNode->next;
+    return lhs;
+}
+
 bool List::isSorted() const noexcept {
     //@TODO add isSorted
     return false;
 }
+
+
 
 void List::deleteAllNodes() noexcept {
     assert( validate() );
     while( head != nullptr ) {
         pop_front();
     }
+
 #ifdef DEBUG
     cout << PROGRAM_NAME << ": All Nodes have been deleted" << endl ;
 #endif

@@ -14,8 +14,24 @@
 
 void SinglyLinkedList::push_front(Node *newNode) {
     if (newNode != nullptr) {
+        //@TODO maybe learn to throw exceptions
         newNode->next = head;
         head = newNode;
         numCats++;
     }
+}
+
+Node *SinglyLinkedList::pop_front() noexcept {
+    if(head != nullptr) {
+        head = head->next;
+        count--;
+    }
+}
+
+void SinglyLinkedList::dump() const noexcept {
+
+}
+
+bool SinglyLinkedList::validate() const noexcept {
+    return false;
 }

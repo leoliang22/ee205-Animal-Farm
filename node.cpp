@@ -13,10 +13,7 @@
 #include "config.h"
 #include <iostream>
 
-void Node::dump() const {
-PRINT_HEADING_FOR_DUMP;
 
-}
 
 bool Node::validate() const noexcept {
     //@TODO add the validation for the node
