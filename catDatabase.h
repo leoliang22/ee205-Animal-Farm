@@ -39,14 +39,11 @@ enum class Genders {
     ,FEMALE
 };
 
-enum class Color{
-    BLACK=0,
-    WHITE,
-    RED,
-    BLUE,
-    GREEN,
-    PINK
-};
+enum class      Color {
+    UNKNOWN_COLOR =0 , BLACK , BROWN , WHITE ,
+    RED , BLUE , GREEN , GINGER ,
+    CREAM , CINNAMON , CALICO
+}
 
 
 class Cat{
