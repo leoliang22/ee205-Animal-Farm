@@ -119,3 +119,21 @@ inline std::ostream& operator<<( std::ostream& lhs_stream, const Genders& rhs_Ge
         return lhs_stream;
 }
 
+inline std::ostream& operator<<( std::ostream& lhs_stream ,const Weight::UnitOfWeight rhs_UnitOfWeight ){
+    switch( rhs_UnitOfWeight ) {
+        case Weight::POUND:
+            lhs_stream << "Pounds";
+            break;
+        case Weight::KILO:
+            lhs_stream << "Kilos";
+            break;
+        case Weight::SLUG:
+            lhs_stream << "Slugs";
+            break;
+        default:
+/// @throw out_of_range If the enum is not mapped to a string.
+            throw std::out_of_range( "The unit can't be mapped to a string" );
+    }
+    return lhs_stream;
+}
+

@@ -15,6 +15,7 @@
 #include "config.h"
 #include "singlyLinkedList.h"
 #include "Cat.h"
+#include "Weight.h"
 using namespace std;
 
 int main() {
