@@ -54,14 +54,14 @@ bool Animal::validate() const noexcept {
     validateSpecies(getSpecies());
     return true;
 }
-
+//specifically checks for if it is a mammal because that is all we are currently dealing with. add more tests for new classifications
 bool Animal::validateClassification(const std::string &checkClassification) noexcept {
     if (checkClassification == "Mammilian"){
         return true;
     }
     return false;
 }
-
+//checks if the species is a cat because that is what we are dealing with. add more tests for new species
 bool Animal::validateSpecies(const std::string &checkSpecies) noexcept {
     if (checkSpecies == "Felis Catus"){
         return true;
