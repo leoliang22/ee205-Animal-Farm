@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  _ee205_lab_08d_animal_farm_1_to_clion - EE 205 - Spr 2022
+/// @brief  Animal_Farm_3 - EE 205 - Spr 2022
 ///
 /// @file Cat.h
 /// @version 1.0
 ///
 /// @author Leo Liang <leoliang@hawaii.edu>
-/// @date   24_Apr_2022
+/// @date   26_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
 #include "Mammal.h"
@@ -17,6 +17,7 @@
 
 #endif //_EE205_LAB_08D_ANIMAL_FARM_1_TO_CLION_CAT_H
 
+//cat class inheriting from mammal class
 class Cat : public Mammal{
 public:
     std::string 	getName () const noexcept;

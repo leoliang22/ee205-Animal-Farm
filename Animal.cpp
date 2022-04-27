@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  _ee205_lab_08d_animal_farm_1_to_clion - EE 205 - Spr 2022
+/// @brief  Animal_Farm_3 - EE 205 - Spr 2022
 ///
 /// @file Animal.cpp
 /// @version 1.0
 ///
 /// @author Leo Liang <leoliang@hawaii.edu>
-/// @date   19_Apr_2022
+/// @date   26_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "Animal.h"
@@ -14,6 +14,7 @@
 
 const std::string Animal::KINGDOM_NAME = "Animalia";
 
+//getters and setters
 std::string Animal::getKingdom() const noexcept {
     return KINGDOM_NAME;
 }
@@ -33,11 +34,11 @@ Genders Animal::getGender() const noexcept {
 Weight::t_weight Animal::getWeight() const noexcept {
     return weight.getWeight();
 }
-
+//calls from Weight.cpp to setweight
 void Animal::setWeight(const Weight::t_weight newWeight) {
     weight.setWeight(newWeight);
 }
-
+//prints out info for dumping
 void Animal::dump() const noexcept {
     Node::dump();
     FORMAT_LINE_FOR_DUMP("Animal", "this") << this << std::endl;
@@ -47,7 +48,7 @@ void Animal::dump() const noexcept {
     FORMAT_LINE_FOR_DUMP("Animal", "gender" ) << getGender() << std::endl ;
     std::cout <<"Animal  weight              " << getWeight() << " out of " << weight.getMaxWeight() << " " << weight.getUnitOfWeight() <<std::endl;
 }
-
+//validation checks
 bool Animal::validate() const noexcept {
     validateClassification((getClassification()));
     validateSpecies(getSpecies());
@@ -67,7 +68,7 @@ bool Animal::validateSpecies(const std::string &checkSpecies) noexcept {
     }
     return false;
 }
-
+//constructors
 Animal::Animal(const Weight::t_weight newMaxWeight, const std::string &newClassification,
                const std::string &newSpecies) {
     weight.setMaxWeight(newMaxWeight);

@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  _ee205_lab_08d_animal_farm_1_to_clion - EE 205 - Spr 2022
+/// @brief  Animal_Farm_3 - EE 205 - Spr 2022
 ///
 /// @file singlyLinkedList.cpp
 /// @version 1.0
 ///
 /// @author Leo Liang <leoliang@hawaii.edu>
-/// @date   19_Apr_2022
+/// @date   26_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "singlyLinkedList.h"
@@ -39,15 +39,17 @@ void SinglyLinkedList::dump() const noexcept {
         pAnimal->dump();
     }
 }
-
+//runs validate node to validate the singlylinkedlist
 bool SinglyLinkedList::validate() const noexcept {
     Node::validate();
     return true;
 }
 
+//initializes a singlylinkedlist with a head pointer pointing to nullptr
 SinglyLinkedList::SinglyLinkedList() {
     head = nullptr;
 }
+
 
 void SinglyLinkedList::insert_after(Node *currentNode, Node *newNode) {
     for(Node* iNode= head; iNode != nullptr; iNode = iNode->next)

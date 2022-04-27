@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  _ee205_lab_08d_animal_farm_1_to_clion - EE 205 - Spr 2022
+/// @brief  Animal_Farm_3 - EE 205 - Spr 2022
 ///
 /// @file node.h
 /// @version 1.0
 ///
 /// @author Leo Liang <leoliang@hawaii.edu>
-/// @date   19_Apr_2022
+/// @date   26_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "config.h"
@@ -31,6 +31,7 @@ public:
     virtual bool 	operator> (const Node &rightSide);
 
 protected:
+    //takes the addresses of the nodes and compares those
     static bool 	compareByAddress (const Node *node1, const Node *node2){
         if( node1 > node2 )
             return true;

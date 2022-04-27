@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// University of Hawaii, College of Engineering
-/// @brief Lab 07d - AnimalFarm 1 - EE 205 - Spr 2022
+/// @brief Animal_Farm_3 - EE 205 - Spr 2022
 ///
 /// @file main.cpp
 /// @version 1.0
 ///
 /// @author Leo Liang <leoliang@hawaii.edu>
-/// @date 20_Mar_2022
+/// @date 26_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 #include <stdio.h>

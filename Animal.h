@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  _ee205_lab_08d_animal_farm_1_to_clion - EE 205 - Spr 2022
+/// @brief  Animal_Farm_3 - EE 205 - Spr 2022
 ///
 /// @file Animal.h
 /// @version 1.0
 ///
 /// @author Leo Liang <leoliang@hawaii.edu>
-/// @date   19_Apr_2022
+/// @date   26_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
 #include <string>
@@ -25,25 +25,30 @@
 
 class Animal: public Node{
 public:
+    //constructors
     Animal (const Weight::t_weight newMaxWeight, const std::string &newClassification, const std::string &newSpecies);
     Animal (const Genders newGender, const Weight::t_weight newWeight, const Weight::t_weight newMaxWeight, const std::string &newClassification, const std::string &newSpecies);
 
+    //getters
     std::string     getKingdom() const noexcept;
     std::string 	getClassification () const noexcept;
     std::string 	getSpecies () const noexcept;
-
     Genders 	getGender () const noexcept;
     Weight::t_weight 	getWeight () const noexcept;
 
+    //setters
     void 	setWeight (const Weight::t_weight newWeight);
 
+    //methods
     virtual std::string 	speak () const noexcept=0;
     void 	dump () const noexcept override;
     bool 	validate () const noexcept override;
 
+    //validation
     static bool 	validateClassification (const std::string &checkClassification) noexcept;
     static bool 	validateSpecies (const std::string &checkSpecies) noexcept;
 
+    //features
     static const std::string KINGDOM_NAME;
 
 private:

@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  _ee205_lab_08d_animal_farm_1_to_clion - EE 205 - Spr 2022
+/// @brief  Animal_Farm_3 - EE 205 - Spr 2022
 ///
 /// @file Mammal.cpp
 /// @version 1.0
 ///
 /// @author Leo Liang <leoliang@hawaii.edu>
-/// @date   24_Apr_2022
+/// @date   26_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "Mammal.h"
@@ -14,6 +14,7 @@
 
 const std::string Mammal::MAMMAL_NAME = "Mammilian";
 
+//getters and setters
 Color Mammal::getColor() const noexcept {
     return color;
 }
@@ -22,6 +23,7 @@ void Mammal::setColor(const Color newColor) noexcept {
     color = newColor;
 }
 
+//this is the information that mammal is printing out
 void Mammal::dump() const noexcept {
     Animal::dump();
     FORMAT_LINE_FOR_DUMP( "Mammal", "color" ) << getColor() << std::endl ;

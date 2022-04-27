@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  ee205_lab_13a_animal_farm_3 - EE 205 - Spr 2022
+/// @brief  Animal_Farm_3 - EE 205 - Spr 2022
 ///
 /// @file catDatabase.h
 /// @version 1.0
 ///
 /// @author Leo Liang <leoliang@hawaii.edu>
-/// @date   19_April_2022
+/// @date   26_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
 
