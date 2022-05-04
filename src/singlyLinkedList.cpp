@@ -39,13 +39,13 @@ void SinglyLinkedList::dump() const noexcept {
         pAnimal->dump();
     }
 }
-//runs validate node to validate the singlylinkedlist
+///runs validate node to validate the singlylinkedlist
 bool SinglyLinkedList::validate() const noexcept {
     Node::validate();
     return true;
 }
 
-//initializes a singlylinkedlist with a head pointer pointing to nullptr
+///initializes a singlylinkedlist with a head pointer pointing to nullptr
 SinglyLinkedList::SinglyLinkedList() {
     head = nullptr;
 }

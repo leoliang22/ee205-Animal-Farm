@@ -14,14 +14,14 @@
 #include <iostream>
 
 
-//function to validate node
+///function to validate node
 bool Node::validate() const noexcept {
     if(next == nullptr){
         return true;
     }
     return true;
 }
-//runs compareByAddress (defined in node.h) on the two nodes
+///runs compareByAddress (defined in node.h) on the two nodes
 bool Node::operator>(const Node &rightSide) {
     return compareByAddress( this, &(Node&)rightSide );
     return false;

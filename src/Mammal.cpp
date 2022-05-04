@@ -14,16 +14,16 @@
 
 const std::string Mammal::MAMMAL_NAME = "Mammilian";
 
-//getters and setters
+///getter
 Color Mammal::getColor() const noexcept {
     return color;
 }
-
+///setter
 void Mammal::setColor(const Color newColor) noexcept {
     color = newColor;
 }
 
-//this is the information that mammal is printing out
+///this is the information that mammal is printing out
 void Mammal::dump() const noexcept {
     Animal::dump();
     FORMAT_LINE_FOR_DUMP( "Mammal", "color" ) << getColor() << std::endl ;
